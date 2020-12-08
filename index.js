@@ -20,7 +20,7 @@ bot.on("message", message => {
 
     if(command === "help") {
         const helpembed = new MessageEmbed()
-        .setAuthor(user.tag, bot.user.displayAvatarURL())
+        .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commandy**__
