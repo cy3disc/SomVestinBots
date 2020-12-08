@@ -20,7 +20,7 @@ bot.on("message", message => {
 
     if(command === "help") {
         const helpembed = new MessageEmbed()
-        .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
+        .setAuthor(user.tag, bot.user.displayAvatarURL())
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commandy**__
@@ -41,10 +41,18 @@ bot.on("message", message => {
         )
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL());
 		message.channel.send(helpembed);
-    } if(command === "warn") {
-var Discord = require('discorde.js')
-
-exports.run = async(client, msg, args)
+    } if(command === "info") {
+        const helpembed = new MessageEmbed()
+        .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
+        .setColor("RANDOM")
+        .setDescription(`
+        Info: 
+        Som 24/7
+        Učím sa programovať
+        Info o servery:
+        Tento server bude giveaway server`)
+        .setFooter("Som rád že ma používaš", message.author.displayAvatarURL());
+        message,channel.send(helpembed)
     }
 });
 
