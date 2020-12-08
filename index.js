@@ -35,7 +35,7 @@ bot.on("message", message => {
     } if(command === "dizajn") {
         const helpembed = new MessageEmbed()
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-        .setColor("#ff0004")
+        .setColor("RANDOM")
         .setDescription(`
         :gift: Práve je špeciálny Vianočný dizajn! Tento dizajn sme zvolili preto lebo idú Vianoce. Nejaké nápady napíš Majitelovy do Pm!`
         )
@@ -44,7 +44,7 @@ bot.on("message", message => {
     } if(command === "info") {
         const helpembed = new MessageEmbed()
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL)
-        .setColor("#0000ff")
+        .setColor("RANDOM")
         .setDescription(`
         **__Info:__**
         Som 24/7
