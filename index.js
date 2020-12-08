@@ -41,7 +41,21 @@ bot.on("message", message => {
         )
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL());
 		message.channel.send(helpembed);
-    } 
+    } if(command === "info") {
+        const helpembed = new MessageEmbed()
+        .setAuthor(bot.user.tag, bot.user.displayAvatarURL)
+        .setColor("RANDOM")
+        .setDescription(`
+        Info:
+        Som 24/7
+        Pôjdem do angličtiny
+        Info servera:
+        Server bude Giveaway server
+        Server bude v angličtine`
+        )
+        .setFooter("Tu máš to info pre viacej kontaktuj Majitela/Santu!", message.author.displayAvatarURL)
+        message.channel.send(helpembed);
+    }
 });
 
 bot.login("NzQ2MjkzOTYzNDM4MTYxOTMy.Xz-Oag.2A5Knj7ZS6mZfYxKjkYeQBx3NaY")
