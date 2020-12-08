@@ -46,10 +46,11 @@ bot.on("message", message => {
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL)
         .setColor("RANDOM")
         .setDescription(`
-        Info:
+        **__Info:__**
         Som 24/7
         Pôjdem do angličtiny
-        Info servera:
+        
+        **__Info servera:__**
         Server bude Giveaway server
         Server bude v angličtine`
         )
