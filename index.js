@@ -26,7 +26,7 @@ bot.on("message", message => {
 :white_check_mark: __**General Commandy**__
 > \`help\`, \`ping\`, \`dizajn\`, \`info\` 
 `)
-        .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL());
+        .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
 
     } if(command === "ping") {
@@ -39,7 +39,7 @@ bot.on("message", message => {
         .setDescription(`
         :gift: Práve je špeciálny Vianočný dizajn! Tento dizajn sme zvolili preto lebo idú Vianoce. Nejaké nápady napíš Majitelovy do Pm!`
         )
-        .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL());
+        .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
     } if(command === "info") {
         const helpembed = new MessageEmbed()
