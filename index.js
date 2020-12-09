@@ -49,6 +49,7 @@ bot.on("message", message => {
         **__Info:__**
         Som 24/7
         Pôjdem do angličtiny
+        Budem Pubic!!!
         
         **__Info servera:__**
         Server bude Giveaway server
