@@ -50,12 +50,9 @@ bot.on("message", message => {
         Som 24/7
         Pôjdem do angličtiny
         Budem Pubic!!!
-        
-        **__Info servera:__**
-        Server bude Giveaway server
-        Server bude v angličtine`
+        Majiteľ Bota je 🍭 ZeroDeads | 𝕯𝖒 𝖋𝖔𝖗 𝖇𝖊𝖘𝖙 𝖘𝖊𝖗𝖛𝖊𝖗#6086`
         )
-        .setFooter("Tu máš to info pre viacej kontaktuj Majitela/Santu!", message.author.displayAvatarURL)
+        .setFooter("Tu máš to info pre viacej kontaktuj Majitela!", message.author.displayAvatarURL)
         message.channel.send(helpembed);
     }
 });
