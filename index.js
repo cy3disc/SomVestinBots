@@ -3,7 +3,7 @@ const { Client, Util, MessageEmbed } = require("discord.js");
 const bot = new Client();
 const PREFIX = "b!";
 
-bot.on("ready", () => bot.user.setActivity("ldndl"));
+bot.on("ready", () => bot.user.setActivity("lol"));
 bot.on("warn", console.warn);
 bot.on("error", console.error);
 bot.on("ready", () => console.log(`[READY] ${bot.user.tag} has been successfully booted up!`));
