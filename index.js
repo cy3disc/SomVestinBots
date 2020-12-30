@@ -24,7 +24,7 @@ bot.on("message", message => {
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commandy**__
-> \`help\`, \`ping\`, \`dizajn\`, \`info\` 
+> \`help\`, \`ping\`, \`dizajn\`, \`info\`,\`invite\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
@@ -54,6 +54,8 @@ bot.on("message", message => {
         )
         .setFooter("Tu máš to info pre viacej kontaktuj Majitela!", message.author.displayAvatarURL)
         message.channel.send(helpembed);
+    } if(command === "invite") {
+        message.reply(`Here you can invite this bot: https://discord.com/api/oauth2/authorize?client_id=746293963438161932&permissions=8&scope=bot`);
     }
 });
 
