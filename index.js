@@ -37,7 +37,7 @@ bot.on("message", message => {
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
         .setColor("RANDOM")
         .setDescription(`
-        :gift: Práve je špeciálny Vianočný dizajn! Tento dizajn sme zvolili preto lebo idú Vianoce. Nejaké nápady napíš Majitelovy do Pm! Pre Info dizajn končí 5.1.2021!`
+        :bot_developer: Práve je obyčajný dizajn lebo nie nič vínimočné. Nejaké nápady napíš Majitelovy do Pm!`
         )
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
