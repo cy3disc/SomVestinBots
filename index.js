@@ -24,7 +24,7 @@ bot.on("message", message => {
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commands**__
-> \`help\`, \`ping\`, \`info\`, \`invite\`  
+> \`help\`, \`ping\`, \`info\`, \`invite\`, \`meme\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
@@ -47,6 +47,23 @@ bot.on("message", message => {
         message.channel.send(helpembed);
     } if(command === "invite") {
         message.reply(`Here you can invite this bot: https://discord.com/api/oauth2/authorize?client_id=746293963438161932&permissions=8&scope=bot`);
+    } if(command === "meme")  {
+    const embed = new MessageEmbed()
+    const got = require('got');
+  got('https://www.reddit.com/r/memes/random/.json').then(response => {
+      let content = JSON.parse(response.body);
+      let permalink = content[0].data.children[0].data.permalink;
+      let memeUrl = 'https://reddit.com'+permalink;
+      let memeImage = content[0].data.children[0].data.url;
+      let memeTitle = content[0].data.children[0].data.title;
+      let memeUpvotes = content[0].data.children[0].data.ups;
+      let memeDownvotes = content[0].data.children[0].data.downs;
+      let memeNumComments = content[0].data.children[0].data.num_comments;
+      embed.addField(memeTitle, '[View thread]('+memeUrl+')');
+      embed.setImage(memeImage);
+      embed.setFooter(':thumbsup: '+memeUpvotes+' :thumbsdown: '+memeDownvotes+' :speech_balloon: '+memeNumComments);
+      message.channel.send(embed)
+  }).catch(console.error);
     }
 });
 
