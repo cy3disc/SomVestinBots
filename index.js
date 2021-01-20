@@ -76,6 +76,22 @@ const member = message.mentions.members.first()
             player_two: member, 
             message: message
        });
+    } if(command === "nuke") {
+        const discord = require("discord.js")
+
+        exports.run = async (client, message, args) => {
+            
+            if(!message.member.hasPermission("ADMINISTRATOR")){
+                return message.channel.send("Sorry You dont have permision to execute this command")
+            }
+            let pos = message.channel.position
+
+            message.channel.clone().then(c => {
+                message.channel.delete()
+                c.setPosition(pos)
+                c.send("This channel has been nuked/nhttps://imgur.com/LIyGeCR")
+            })
+        }
     }
     
 });
