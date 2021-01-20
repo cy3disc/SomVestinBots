@@ -24,7 +24,9 @@ bot.on("message", message => {
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commands**__
-> \`help\`, \`ping\`, \`info\`, \`invite\`, \`meme\`, \`tictactoe\`  
+> \`help\`, \`ping\`, \`info\`, \`invite\`
+:confetti_ball: __**Fun commands**__
+> \`meme\`, \`tictactoe\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
