@@ -26,7 +26,7 @@ bot.on("message", message => {
 :white_check_mark: __**General Commands**__
 > \`help\`, \`ping\`, \`info\`, \`invite\`
 :confetti_ball: __**Fun commands**__
-> \`meme\`, \`tictactoe\`  
+> \`meme\`, \`tictactoe\`, \`cov\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
@@ -76,6 +76,67 @@ const member = message.mentions.members.first()
             player_two: member, 
             message: message
        });
+    } if(command === "cov") {
+        const baseUrl = "https://corona.lmao.ninja/v2";
+        let url, response, corona;
+        try {
+            url = args[1] ? `${baseUrl}/countries/${args[1]}`:`${baseUrl}/all`
+            response = await axios.get(url)
+            corona = response.data
+        } catch (error) {
+            return message.channel.send(`***${args[1]}*** doesn't exist, or data isn't being collected`)
+        }
+        const embedcovid19 = new MessageEmbed()
+            .setTitle(args[1] ? `${args[1].toUpperCase()} Covid-19 Stats` : 'Total Corona Cases Worldwide')
+            .setColor('#fb644c')
+            .setThumbnail(args[1] ? corona.countryInfo.flag : 'https://i.giphy.com/YPbrUhP9Ryhgi2psz3.gif')
+            .addFields(
+                {
+                    name: 'Total Cases:',
+                    value: corona.cases.toLocaleString(),
+                    inline: true
+                },
+                {
+                    name: 'Total Deaths:',
+                    value: corona.deaths.toLocaleString(),
+                    inline: true
+                },
+                {
+                    name: 'Total Recovered:',
+                    value: corona.recovered.toLocaleString(),
+                    inline: true
+                },
+                {
+                    name: 'Active Cases:',
+                    value: corona.active.toLocaleString(),
+                    inline: true
+                },
+                {
+                    name: '\u200b',
+                    value: '\u200b',
+                    inline: true
+                },
+                {
+                    name: 'Critical Cases:',
+                    value: corona.critical.toLocaleString(),
+                    inline: true
+                },
+                {
+                    name: 'Today Cases:',
+                    value: corona.todayCases.toLocaleString().replace("-", ""),
+                    inline: true
+                },
+                {
+                    name: 'Today Recoveries:',
+                    value: corona.todayRecovered.toLocaleString().replace("-", ""),
+                    inline: true
+                },
+                {
+                    name: 'Todays Deaths:',
+                    value: corona.todayDeaths.toLocaleString(),
+                    inline: true
+                })
+        await message.channel.send(embedcovid19)
     }
     
 });
