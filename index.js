@@ -47,8 +47,7 @@ bot.on("message", message => {
         message.channel.send(helpembed);
     } if(command === "invite") {
         message.reply(`Here you can invite this bot: https://discord.com/api/oauth2/authorize?client_id=746293963438161932&permissions=8&scope=bot`);
-    } if(command === "meme")  {
-    const embed = new MessageEmbed()
+    } const embed = new MessageEmbed()
     const got = require('got');
   got('https://www.reddit.com/r/memes/random/.json').then(response => {
       let content = JSON.parse(response.body);
@@ -64,7 +63,7 @@ bot.on("message", message => {
       embed.setFooter(':thumbsup: '+memeUpvotes+' :thumbsdown: '+memeDownvotes+' :speech_balloon: '+memeNumComments);
       message.channel.send(embed)
   }).catch(console.error);
-    }
+    
 });
 
 bot.login("NzQ2MjkzOTYzNDM4MTYxOTMy.Xz-Oag.2A5Knj7ZS6mZfYxKjkYeQBx3NaY")
