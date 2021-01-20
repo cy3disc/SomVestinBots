@@ -23,8 +23,8 @@ bot.on("message", message => {
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
         .setColor("RANDOM")
         .setDescription(`
-:white_check_mark: __**General Commandy**__
-> \`help\`, \`ping\`, \`dizajn\`, \`info\`,\`invite\`  
+:white_check_mark: __**General Commands**__
+> \`help\`, \`ping\`, \`info\`,\`invite\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
@@ -32,27 +32,18 @@ bot.on("message", message => {
     } if(command === "ping") {
         const timeTaken = Date.now() - message.createdTimestamp;
         message.reply(`Pong! Latency: ${timeTaken}ms.`);
-    } if(command === "dizajn") {
-        const helpembed = new MessageEmbed()
-        .setAuthor(bot.user.tag, bot.user.displayAvatarURL())
-        .setColor("RANDOM")
-        .setDescription(`
-        :bot_developer: Práve je obyčajný dizajn lebo nie nič vínimočné. Nejaké nápady napíš Majitelovy do Pm!`
-        )
-        .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
-		message.channel.send(helpembed);
+    
     } if(command === "info") {
         const helpembed = new MessageEmbed()
         .setAuthor(bot.user.tag, bot.user.displayAvatarURL)
         .setColor("RANDOM")
         .setDescription(`
         **__Info:__**
-        Som 24/7
-        Pôjdem do angličtiny
-        Budem Pubic!!!
-        Majiteľ Bota je 🍭 ZeroDeads | 𝕯𝖒 𝖋𝖔𝖗 𝖇𝖊𝖘𝖙 𝖘𝖊𝖗𝖛𝖊𝖗#6086`
+        I am 24/7
+        I will be Pubic!!!
+        Owner is GroovyLoveR#0983`
         )
-        .setFooter("Tu máš to info pre viacej kontaktuj Majitela!", message.author.displayAvatarURL)
+        .setFooter("For more info contact Owner!", message.author.displayAvatarURL)
         message.channel.send(helpembed);
     } if(command === "invite") {
         message.reply(`Here you can invite this bot: https://discord.com/api/oauth2/authorize?client_id=746293963438161932&permissions=8&scope=bot`);
