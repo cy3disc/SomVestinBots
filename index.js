@@ -24,7 +24,7 @@ bot.on("message", message => {
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commands**__
-> \`help\`, \`ping\`, \`info\`, \`invite\`, \`meme\`  
+> \`help\`, \`ping\`, \`info\`, \`invite\`, \`meme\`, \`tictactoe\`  
 `)
         .setFooter("By mstudio45 for cy3", message.author.displayAvatarURL);
 		message.channel.send(helpembed);
@@ -65,7 +65,8 @@ bot.on("message", message => {
           embed.setFooter(':thumbsup: '+memeUpvotes+' :thumbsdown: '+memeDownvotes+' :speech_balloon: '+memeNumComments);
           message.channel.send(embed)
       }).catch(console.error);
-    } if(command === "meme") {
+    
+    } if(command === "tictactoe") {
         const { tictactoe } = require('reconlx')
 const member = message.mentions.members.first() 
             if(!member)  return  message.channel.send('Please mark the one you want to play with.')
