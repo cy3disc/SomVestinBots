@@ -65,6 +65,14 @@ bot.on("message", message => {
           embed.setFooter(':thumbsup: '+memeUpvotes+' :thumbsdown: '+memeDownvotes+' :speech_balloon: '+memeNumComments);
           message.channel.send(embed)
       }).catch(console.error);
+    } if(command === "meme") {
+        const { tictactoe } = require('reconlx')
+const member = message.mentions.members.first() 
+            if(!member)  return  message.channel.send('Please mark the one you want to play with.')
+        new tictactoe({
+            player_two: member, 
+            message: message
+       });
     }
     
 });
