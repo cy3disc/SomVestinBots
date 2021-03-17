@@ -9,7 +9,7 @@ bot.on("error", console.error);
 bot.on("ready", () => console.log(`[READY] ${bot.user.tag} has been successfully booted up!`));
 bot.on("shardDisconnect", (event, id) => console.log(`[SHARD] Shard ${id} disconnected (${event.code}) ${event}, trying to reconnect...`));
 bot.on("shardReconnecting", (id) => console.log(`[SHARD] Shard ${id} reconnecting...`));
-bot.on("ready", () => bot.user.setActivity("b!help"));
+bot.on("ready", () => bot.user.setActivity("b!help   |   V.1.0"));
 
 bot.on("message", message => {
     if(message.author.bot || !message.content.startsWith(PREFIX)) return;
