@@ -24,7 +24,7 @@ bot.on("message", message => {
         .setColor("RANDOM")
         .setDescription(`
 :white_check_mark: __**General Commands**__
-> \`help\`, \`ping\`, \`info\`, \`invite\`
+> \`help\`, \`ping\`, \`info\`, \`invite\`, \`version\`
 :confetti_ball: __**Fun commands**__
 > \`meme\`, \`tictactoe\`  
 `)
@@ -76,6 +76,8 @@ const member = message.mentions.members.first()
             player_two: member, 
             message: message
        });
+    } if(command === "version") {
+        message.reply(`New version of me!!!: https://discord.com/api/oauth2/authorize?client_id=812636335419817984&permissions=8&scope=bot`)
     }
     
 });
